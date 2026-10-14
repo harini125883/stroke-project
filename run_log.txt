@@ -1,0 +1,162 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791907604.964864     255 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791907606.370383     255 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Shape: (5110, 12)
+id                     int64
+gender                   str
+age                  float64
+hypertension           int64
+heart_disease          int64
+ever_married             str
+work_type                str
+Residence_type           str
+avg_glucose_level    float64
+bmi                  float64
+smoking_status           str
+stroke                 int64
+dtype: object
+                    count unique           top  ...      50%      75%      max
+id                 5110.0    NaN           NaN  ...  36932.0  54682.0  72940.0
+gender               5110      3        Female  ...      NaN      NaN      NaN
+age                5110.0    NaN           NaN  ...     45.0     61.0     82.0
+hypertension       5110.0    NaN           NaN  ...      0.0      0.0      1.0
+heart_disease      5110.0    NaN           NaN  ...      0.0      0.0      1.0
+ever_married         5110      2           Yes  ...      NaN      NaN      NaN
+work_type            5110      5       Private  ...      NaN      NaN      NaN
+Residence_type       5110      2         Urban  ...      NaN      NaN      NaN
+avg_glucose_level  5110.0    NaN           NaN  ...   91.885   114.09   271.74
+bmi                4909.0    NaN           NaN  ...     28.1     33.1     97.6
+smoking_status       5110      4  never smoked  ...      NaN      NaN      NaN
+stroke             5110.0    NaN           NaN  ...      0.0      0.0      1.0
+
+[12 rows x 11 columns]
+Missing values:
+ id                     0
+gender                 0
+age                    0
+hypertension           0
+heart_disease          0
+ever_married           0
+work_type              0
+Residence_type         0
+avg_glucose_level      0
+bmi                  201
+smoking_status         0
+stroke                 0
+dtype: int64
+Duplicate rows: 0 | duplicate ids: 0
+IQR outliers: {'age': 0, 'avg_glucose_level': 627, 'bmi': 110}
+   gender   age  hypertension  ...  glucose_category comorbidity_count is_senior
+0    Male  67.0             0  ...          diabetic                 1         1
+1  Female  61.0             0  ...          diabetic                 0         1
+2    Male  80.0             0  ...       prediabetic                 1         1
+3  Female  49.0             0  ...          diabetic                 0         0
+4  Female  79.0             1  ...          diabetic                 1         1
+
+[5 rows x 16 columns]
+                    count        mean        std  ...     max      skew  kurtosis
+age                5109.0   43.229986  22.613575  ...   82.00 -0.137430 -0.990931
+avg_glucose_level  5109.0  106.140399  45.285004  ...  271.74  1.572815  1.681721
+bmi                4908.0   28.894560   7.854320  ...   97.60  1.055063  3.362330
+
+[3 rows x 10 columns]
+MWU_age {'median_stroke': 71.0, 'median_nostroke': 43.0, 'p': 0.0}
+MWU_avg_glucose_level {'median_stroke': 105.22, 'median_nostroke': 91.465, 'p': 0.0}
+MWU_bmi {'median_stroke': 29.7, 'median_nostroke': 28.0, 'p': 0.0001}
+chi2_gender {'chi2': 0.34, 'p': 0.5598, 'cramers_v': 0.0082}
+chi2_hypertension {'chi2': 81.5731, 'p': 0.0, 'cramers_v': 0.1264}
+chi2_heart_disease {'chi2': 90.2294, 'p': 0.0, 'cramers_v': 0.1329}
+chi2_ever_married {'chi2': 58.8678, 'p': 0.0, 'cramers_v': 0.1073}
+chi2_work_type {'chi2': 49.1591, 'p': 0.0, 'cramers_v': 0.0981}
+chi2_Residence_type {'chi2': 1.075, 'p': 0.2998, 'cramers_v': 0.0145}
+chi2_smoking_status {'chi2': 29.2257, 'p': 0.0, 'cramers_v': 0.0756}
+chi2_age_group {'chi2': 302.1235, 'p': 0.0, 'cramers_v': 0.2432}
+chi2_bmi_category {'chi2': 124.6097, 'p': 0.0, 'cramers_v': 0.1562}
+chi2_glucose_category {'chi2': 70.7284, 'p': 0.0, 'cramers_v': 0.1177}
+pointbiserial_age {'r': 0.2452, 'p': 0.0}
+pointbiserial_avg_glucose_level {'r': 0.132, 'p': 0.0}
+pointbiserial_bmi {'r': 0.0423, 'p': 0.003}
+{
+ "age": {
+  "dagostino_p": 6.466817238449553e-244,
+  "KS_normal": 0.05076304033084056,
+  "KS_lognormal": 0.1670607810132244
+ },
+ "avg_glucose_level": {
+  "dagostino_p": 2.1840552435286905e-289,
+  "KS_normal": 0.18291512899797358,
+  "KS_lognormal": 0.10282360448413375
+ },
+ "bmi": {
+  "dagostino_p": 2.2866990701300037e-222,
+  "KS_normal": 0.05877394534947422,
+  "KS_lognormal": 0.023148431015503124
+ },
+ "stroke_binomial": {
+  "n": 5109,
+  "p_hat": 0.04873752201996477,
+  "mean": 249.00000000000003,
+  "sd": 15.390398208526927
+ },
+ "comorbidity_distribution": {
+  "0": 0.861,
+  "1": 0.1264,
+  "2": 0.0125
+ }
+}
+Split sizes train/val/test: 3576 766 767 | stroke rate: 0.0487 0.0483 0.0495
+Final model input dimension: 33
+{'units': '(32,)', 'dropout': 0.2, 'lr': 0.001, 'batch': 64, 'val_auc': 0.8393949505060617, 'epochs': 20}
+{'units': '(64, 32)', 'dropout': 0.2, 'lr': 0.001, 'batch': 64, 'val_auc': 0.8178178178178178, 'epochs': 19}
+{'units': '(128, 64)', 'dropout': 0.2, 'lr': 0.001, 'batch': 64, 'val_auc': 0.833463092722352, 'epochs': 16}
+{'units': '(32,)', 'dropout': 0.2, 'lr': 0.003, 'batch': 64, 'val_auc': 0.835872909946984, 'epochs': 18}
+{'units': '(64, 32)', 'dropout': 0.2, 'lr': 0.003, 'batch': 64, 'val_auc': 0.8224150076001928, 'epochs': 19}
+{'units': '(128, 64)', 'dropout': 0.2, 'lr': 0.003, 'batch': 64, 'val_auc': 0.8208208208208209, 'epochs': 20}
+{'units': '(32,)', 'dropout': 0.4, 'lr': 0.001, 'batch': 64, 'val_auc': 0.8321654988321656, 'epochs': 23}
+{'units': '(64, 32)', 'dropout': 0.4, 'lr': 0.001, 'batch': 64, 'val_auc': 0.8169651132614096, 'epochs': 25}
+{'units': '(128, 64)', 'dropout': 0.4, 'lr': 0.001, 'batch': 64, 'val_auc': 0.8405442479516554, 'epochs': 23}
+{'units': '(32,)', 'dropout': 0.4, 'lr': 0.003, 'batch': 64, 'val_auc': 0.8333889445000556, 'epochs': 20}
+{'units': '(64, 32)', 'dropout': 0.4, 'lr': 0.003, 'batch': 64, 'val_auc': 0.8259741222704186, 'epochs': 24}
+{'units': '(128, 64)', 'dropout': 0.4, 'lr': 0.003, 'batch': 64, 'val_auc': 0.8388017647276907, 'epochs': 19}
+        units  dropout     lr  batch   val_auc  epochs
+8   (128, 64)      0.4  0.001     64  0.840544      23
+0       (32,)      0.2  0.001     64  0.839395      20
+11  (128, 64)      0.4  0.003     64  0.838802      19
+3       (32,)      0.2  0.003     64  0.835873      18
+2   (128, 64)      0.2  0.001     64  0.833463      16
+9       (32,)      0.4  0.003     64  0.833389      20
+6       (32,)      0.4  0.001     64  0.832165      23
+10   (64, 32)      0.4  0.003     64  0.825974      24
+4    (64, 32)      0.2  0.003     64  0.822415      19
+5   (128, 64)      0.2  0.003     64  0.820821      20
+1    (64, 32)      0.2  0.001     64  0.817818      19
+7    (64, 32)      0.4  0.001     64  0.816965      25
+Best hyper-parameters: {'batch': 64, 'dropout': 0.4, 'l2': 0.0001, 'lr': 0.001, 'units': (128, 64)}
+Model: "sequential_12"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ dense_32 (Dense)                │ (None, 128)            │         4,352 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ batch_normalization_20          │ (None, 128)            │           512 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout_20 (Dropout)            │ (None, 128)            │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_33 (Dense)                │ (None, 64)             │         8,256 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ batch_normalization_21          │ (None, 64)             │           256 │
+│ (BatchNormalization)            │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout_21 (Dropout)            │ (None, 64)             │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_34 (Dense)                │ (None, 1)              │            65 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 39,557 (154.52 KB)
+ Trainable params: 13,057 (51.00 KB)
+ Non-trainable params: 384 (1.50 KB)
+ Optimizer params: 26,116 (102.02 KB)
+MLP: {'accuracy': 0.675, 'precision': 0.108, 'recall': 0.763, 'f1': 0.189, 'roc_auc': 0.813, 'pr_auc': 0.166}
+LogReg: {'accuracy': 0.751, 'precision': 0.144, 'recall': 0.816, 'f1': 0.245, 'roc_auc': 0.837, 'pr_auc': 0.186}
+DONE

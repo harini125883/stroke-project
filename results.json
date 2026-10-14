@@ -1,0 +1,350 @@
+{
+ "raw_shape": [
+  5110,
+  12
+ ],
+ "missing_bmi": 201,
+ "duplicates": 0,
+ "class_counts": {
+  "0": 4861,
+  "1": 249
+ },
+ "outliers_iqr": {
+  "age": 0,
+  "avg_glucose_level": 627,
+  "bmi": 110
+ },
+ "clean_shape": [
+  5109,
+  16
+ ],
+ "numeric_summary": {
+  "count": {
+   "age": 5109.0,
+   "avg_glucose_level": 5109.0,
+   "bmi": 4908.0
+  },
+  "mean": {
+   "age": 43.23,
+   "avg_glucose_level": 106.14,
+   "bmi": 28.895
+  },
+  "std": {
+   "age": 22.614,
+   "avg_glucose_level": 45.285,
+   "bmi": 7.854
+  },
+  "min": {
+   "age": 0.08,
+   "avg_glucose_level": 55.12,
+   "bmi": 10.3
+  },
+  "25%": {
+   "age": 25.0,
+   "avg_glucose_level": 77.24,
+   "bmi": 23.5
+  },
+  "50%": {
+   "age": 45.0,
+   "avg_glucose_level": 91.88,
+   "bmi": 28.1
+  },
+  "75%": {
+   "age": 61.0,
+   "avg_glucose_level": 114.09,
+   "bmi": 33.1
+  },
+  "max": {
+   "age": 82.0,
+   "avg_glucose_level": 271.74,
+   "bmi": 97.6
+  },
+  "skew": {
+   "age": -0.137,
+   "avg_glucose_level": 1.573,
+   "bmi": 1.055
+  },
+  "kurtosis": {
+   "age": -0.991,
+   "avg_glucose_level": 1.682,
+   "bmi": 3.362
+  }
+ },
+ "stat_tests": {
+  "MWU_age": {
+   "median_stroke": 71.0,
+   "median_nostroke": 43.0,
+   "p": 3.8497341579673305e-71
+  },
+  "MWU_avg_glucose_level": {
+   "median_stroke": 105.22,
+   "median_nostroke": 91.465,
+   "p": 3.583094987269707e-09
+  },
+  "MWU_bmi": {
+   "median_stroke": 29.7,
+   "median_nostroke": 28.0,
+   "p": 0.00010418772123808268
+  },
+  "chi2_gender": {
+   "chi2": 0.340002536046177,
+   "p": 0.5598277580669416,
+   "cramers_v": 0.008157801373075214
+  },
+  "chi2_hypertension": {
+   "chi2": 81.57314462043591,
+   "p": 1.688936253410575e-19,
+   "cramers_v": 0.12635884599246405
+  },
+  "chi2_heart_disease": {
+   "chi2": 90.22943664078221,
+   "p": 2.120831133146208e-21,
+   "cramers_v": 0.1328942441984636
+  },
+  "chi2_ever_married": {
+   "chi2": 58.86780922483486,
+   "p": 1.6862856191673454e-14,
+   "cramers_v": 0.10734232198815681
+  },
+  "chi2_work_type": {
+   "chi2": 49.1591485868476,
+   "p": 5.40903546949726e-10,
+   "cramers_v": 0.09809214352547563
+  },
+  "chi2_Residence_type": {
+   "chi2": 1.0749713079092142,
+   "p": 0.29982523877153633,
+   "cramers_v": 0.014505425904914148
+  },
+  "chi2_smoking_status": {
+   "chi2": 29.22572707549827,
+   "p": 2.0077041756108317e-06,
+   "cramers_v": 0.07563358927668186
+  },
+  "chi2_age_group": {
+   "chi2": 302.1235373190139,
+   "p": 3.4527901980615624e-65,
+   "cramers_v": 0.24317802618868434
+  },
+  "chi2_bmi_category": {
+   "chi2": 124.60972910412981,
+   "p": 5.530675948915918e-26,
+   "cramers_v": 0.1561737449731331
+  },
+  "chi2_glucose_category": {
+   "chi2": 70.72835503153726,
+   "p": 4.3805924251963016e-16,
+   "cramers_v": 0.11765999550104939
+  },
+  "pointbiserial_age": {
+   "r": 0.24523875623198224,
+   "p": 7.435468822639494e-71
+  },
+  "pointbiserial_avg_glucose_level": {
+   "r": 0.13199119156645805,
+   "p": 2.7053026971672907e-21
+  },
+  "pointbiserial_bmi": {
+   "r": 0.042341277180278046,
+   "p": 0.0030083559555264226
+  }
+ },
+ "distribution_fits": {
+  "age": {
+   "dagostino_p": 6.466817238449553e-244,
+   "KS_normal": 0.05076304033084056,
+   "KS_lognormal": 0.1670607810132244
+  },
+  "avg_glucose_level": {
+   "dagostino_p": 2.1840552435286905e-289,
+   "KS_normal": 0.18291512899797358,
+   "KS_lognormal": 0.10282360448413375
+  },
+  "bmi": {
+   "dagostino_p": 2.2866990701300037e-222,
+   "KS_normal": 0.05877394534947422,
+   "KS_lognormal": 0.023148431015503124
+  },
+  "stroke_binomial": {
+   "n": 5109,
+   "p_hat": 0.04873752201996477,
+   "mean": 249.00000000000003,
+   "sd": 15.390398208526927
+  },
+  "comorbidity_distribution": {
+   "0": 0.861,
+   "1": 0.1264,
+   "2": 0.0125
+  }
+ },
+ "corr_with_stroke": {
+  "age": 0.25,
+  "avg_glucose_level": 0.083,
+  "bmi": 0.055,
+  "hypertension": 0.128,
+  "heart_disease": 0.135,
+  "comorbidity_count": 0.173,
+  "is_senior": 0.233,
+  "ever_married": 0.108
+ },
+ "split": {
+  "train": 3576,
+  "val": 766,
+  "test": 767,
+  "stroke_train": 174,
+  "stroke_val": 37,
+  "stroke_test": 38
+ },
+ "n_input_features": 33,
+ "best_params": {
+  "batch": "64",
+  "dropout": "0.4",
+  "l2": "0.0001",
+  "lr": "0.001",
+  "units": "(128, 64)"
+ },
+ "tuning": [
+  {
+   "units": "(128, 64)",
+   "dropout": 0.4,
+   "lr": 0.001,
+   "batch": 64,
+   "val_auc": 0.8405,
+   "epochs": 23
+  },
+  {
+   "units": "(32,)",
+   "dropout": 0.2,
+   "lr": 0.001,
+   "batch": 64,
+   "val_auc": 0.8394,
+   "epochs": 20
+  },
+  {
+   "units": "(128, 64)",
+   "dropout": 0.4,
+   "lr": 0.003,
+   "batch": 64,
+   "val_auc": 0.8388,
+   "epochs": 19
+  },
+  {
+   "units": "(32,)",
+   "dropout": 0.2,
+   "lr": 0.003,
+   "batch": 64,
+   "val_auc": 0.8359,
+   "epochs": 18
+  },
+  {
+   "units": "(128, 64)",
+   "dropout": 0.2,
+   "lr": 0.001,
+   "batch": 64,
+   "val_auc": 0.8335,
+   "epochs": 16
+  },
+  {
+   "units": "(32,)",
+   "dropout": 0.4,
+   "lr": 0.003,
+   "batch": 64,
+   "val_auc": 0.8334,
+   "epochs": 20
+  },
+  {
+   "units": "(32,)",
+   "dropout": 0.4,
+   "lr": 0.001,
+   "batch": 64,
+   "val_auc": 0.8322,
+   "epochs": 23
+  },
+  {
+   "units": "(64, 32)",
+   "dropout": 0.4,
+   "lr": 0.003,
+   "batch": 64,
+   "val_auc": 0.826,
+   "epochs": 24
+  },
+  {
+   "units": "(64, 32)",
+   "dropout": 0.2,
+   "lr": 0.003,
+   "batch": 64,
+   "val_auc": 0.8224,
+   "epochs": 19
+  },
+  {
+   "units": "(128, 64)",
+   "dropout": 0.2,
+   "lr": 0.003,
+   "batch": 64,
+   "val_auc": 0.8208,
+   "epochs": 20
+  },
+  {
+   "units": "(64, 32)",
+   "dropout": 0.2,
+   "lr": 0.001,
+   "batch": 64,
+   "val_auc": 0.8178,
+   "epochs": 19
+  },
+  {
+   "units": "(64, 32)",
+   "dropout": 0.4,
+   "lr": 0.001,
+   "batch": 64,
+   "val_auc": 0.817,
+   "epochs": 25
+  }
+ ],
+ "n_params": 13441,
+ "epochs_trained": 23,
+ "threshold": 0.5358258485794067,
+ "test_mlp": {
+  "accuracy": 0.6753585397653195,
+  "precision": 0.10780669144981413,
+  "recall": 0.7631578947368421,
+  "f1": 0.18892508143322476,
+  "roc_auc": 0.8130459894592448,
+  "pr_auc": 0.1658583948995307
+ },
+ "test_logreg": {
+  "accuracy": 0.7509778357235984,
+  "precision": 0.14418604651162792,
+  "recall": 0.8157894736842105,
+  "f1": 0.2450592885375494,
+  "roc_auc": 0.8368709840444732,
+  "pr_auc": 0.1855538038980877
+ },
+ "confusion_matrix": [
+  [
+   489,
+   240
+  ],
+  [
+   9,
+   29
+  ]
+ ],
+ "feature_importance": {
+  "age": 0.1998,
+  "age_group": 0.0116,
+  "comorbidity_count": 0.01,
+  "avg_glucose_level": 0.0069,
+  "gender": 0.0042,
+  "is_senior": 0.0028,
+  "ever_married": 0.0011,
+  "Residence_type": -0.0001,
+  "bmi_category": -0.0002,
+  "work_type": -0.0011,
+  "heart_disease": -0.0011,
+  "bmi": -0.0013,
+  "hypertension": -0.0015,
+  "glucose_category": -0.0017,
+  "smoking_status": -0.0026
+ }
+}
